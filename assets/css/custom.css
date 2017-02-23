@@ -1,0 +1,44 @@
+.standfirst h1 {
+  font-size: 2rem;
+}
+
+.search input[type="text"] {
+  height: 28px;
+  padding: 0 10px;
+  margin: 0;
+  line-height: 28px;
+  border-radius: unset;
+  display: inline-block;
+  vertical-align: top;
+}
+.search input[type="submit"], 
+.button-search {
+  dispaly: inline-block;
+  height: 28px;
+  padding: 0 10px;
+  margin: 0;
+  line-height: 28px;
+  font-weight: 400;
+  position: relative;
+  border-radius: unset;
+  border-left:0;
+  left: -5px;
+}
+
+.flash {
+  font-weight:bold;
+  padding: 5px 5px;
+  margin:8px 0;
+}
+.error {
+  background-color: #FFBABA;
+  color: #D8000C;
+}
+.success {
+  background-color: #DFF2BF;
+  color: #4F8A10;
+}
+.info {
+  background-color: #BDE5F8;
+  color: #00529B;
+}
