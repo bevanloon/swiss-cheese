@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,300italic,700,700italic">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/custom.css?<%= Random.new.rand(100) %>">
+  </head>
+
+  <div class="container standfirst">
+    <div class="row">
+      <div class="six columns">
+        <h1>swiss cheese</h1>
+      </div>
+      <div class="six columns">
+      </div>
+    </div>
+
+    <div class="container content">
+      <%= yield %>
+    </div>
+</html>
+
