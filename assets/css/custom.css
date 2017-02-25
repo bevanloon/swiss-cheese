@@ -1,7 +1,9 @@
 .standfirst h1 {
   font-size: 2rem;
 }
-
+.input-post-body {
+  height: 300px;
+}
 .search input[type="text"] {
   height: 28px;
   padding: 0 10px;
