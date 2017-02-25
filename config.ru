@@ -1,5 +1,10 @@
+
 require './environment'
 require './swiss_cheese'
-require './controllers/post'
+require './controllers/posts'
+
+require './models/post'
+
+
 map('/') { run SwissCheese }
-map('/posts') { run Post }
+map('/posts') { run Posts }
