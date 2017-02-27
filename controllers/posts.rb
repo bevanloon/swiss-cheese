@@ -12,6 +12,7 @@ class Posts < SwissCheese
     post = Post.new
     post.title = params["title"]
     post.body = params["body"]
+    post.draft = true if params["draft"]
     if post.save
       "success"
     else
