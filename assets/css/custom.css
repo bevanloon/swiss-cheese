@@ -44,3 +44,12 @@
   background-color: #BDE5F8;
   color: #00529B;
 }
+.search-result {
+  padding:10px 0;
+}
+.search-result-title {
+  font-weight: bold;
+}
+.menu a {
+  text-decoration: none;
+}
