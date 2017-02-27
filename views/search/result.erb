@@ -1,0 +1,7 @@
+<h2>Search results</h2>
+<% @results.each do |result| %>
+  <div class="search-result">
+    <p class="search-result-title"><%= result.title %></p>
+    <p class="search-result-body"><%= result.body %></p>
+  </div>
+<% end %>
