@@ -1,5 +1,6 @@
 class Posts < SwissCheese
   get '/' do
+    @posts = Post.all
     erb :'posts/index'
   end
 
