@@ -10,12 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170227092050) do
+ActiveRecord::Schema.define(version: 20170302193917) do
 
   create_table "posts", force: :cascade do |t|
     t.string  "body"
     t.string  "title"
     t.boolean "draft"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string  "user_name"
+    t.string  "password_digest"
+    t.boolean "admin",           default: false
   end
 
 end
