@@ -1,6 +1,6 @@
 class Posts < SwissCheese
   get '/' do
-    @posts = Post.all
+    @posts = Post.where(draft: false)
     erb :'posts/index'
   end
 
@@ -12,7 +12,11 @@ class Posts < SwissCheese
     post = Post.new
     post.title = params["title"]
     post.body = params["body"]
-    post.draft = true if params["draft"]
+    if params["draft"]
+      post.draft = true
+    else
+      post.draft = false
+    end
     if post.save
       "success"
     else
