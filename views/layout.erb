@@ -15,8 +15,11 @@
         <h1>swiss cheese</h1>
       </div>
       <div class="three columns menu">
-        <a href="/posts">list posts</a> |
-        <a href="/posts/new">new post</a>
+        <% if current_user %>
+          <a href="/posts">list posts</a> |
+          <a href="/posts/new">new post</a> |
+        <% end %>
+        <%= session[:user_id] || '<a href="/account/sign-in">sign in</a> | <a href="/account/sign-up">sign up</a>' %>
       </div>
       <div class="six columns">
         <div class="search u-pull-right">

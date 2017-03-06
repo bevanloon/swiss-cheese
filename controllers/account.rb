@@ -20,6 +20,7 @@ class Account < SwissCheese
   post '/sign-in' do
     user = User.find_by(user_name: params[:user]['user_name'])
     if user && user.authenticate(params[:user]['password'])
+      session[:user_id] = user.id
       'Signed in'
     else
       'Uh oh'
