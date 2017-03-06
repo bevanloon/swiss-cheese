@@ -1,7 +1,7 @@
 class Search < SwissCheese
   get '/' do
     where = params["q"]
-    @results = Post.where("body like '%#{where}%'")
+    @results = Post.where("draft = 'f' and body like '%#{where}%'")
 
     erb :"search/result"
 
