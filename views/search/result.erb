@@ -2,6 +2,6 @@
 <% @results.each do |result| %>
   <div class="search-result">
     <p class="search-result-title"><%= result.title %></p>
-    <p class="search-result-body"><%= result.body %></p>
+    <p class="search-result-body"><%= "#{result.body[0..200]}..." %></p>
   </div>
 <% end %>
