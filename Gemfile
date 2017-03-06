@@ -9,3 +9,6 @@ gem 'racksh'
 gem 'bcrypt'
 gem 'rerun'
 
+group :test do
+  gem 'rack-test'
+end
