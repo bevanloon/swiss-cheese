@@ -5,7 +5,6 @@ class Account < SwissCheese
   end
 
   post '/sign-up' do
-    user = User.new(user_name: params['user_name'], password: params['password'])
     user = User.new(params[:user])
     if user.save
       "Your account has been created"
@@ -16,5 +15,14 @@ class Account < SwissCheese
 
   get '/sign-in' do
     erb :'account/sign-in'
+  end
+
+  post '/sign-in' do
+    user = User.find_by(user_name: params[:user]['user_name'])
+    if user && user.authenticate(params[:user]['password'])
+      'Signed in'
+    else
+      'Uh oh'
+    end
   end
 end
