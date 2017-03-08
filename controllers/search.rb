@@ -4,6 +4,5 @@ class Search < SwissCheese
     @results = Post.where("draft = 'f' and body like '%#{where}%'")
 
     erb :"search/result"
-
   end
 end
