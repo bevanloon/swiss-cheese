@@ -1,0 +1,23 @@
+<h3>Users</h3>
+
+<table>
+  <tr>
+    <th>User name</th>
+    <th>Admin</th>
+    <th>&nbsp;</th>
+  </tr>
+<% @users.each do |user| %>
+  <tr>
+    <td>
+      <%= user.user_name %> 
+    </td>
+    <td>
+      <%= user.admin %>
+    </td>
+    <td>
+      delete
+    </td>
+  </tr>
+<% end %>
+</table>
+  
