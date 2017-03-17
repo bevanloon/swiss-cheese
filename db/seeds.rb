@@ -1,3 +1,11 @@
+User.destroy_all
+
+User.create(
+  user_name: 'admin',
+  password: 'password',
+  admin: true
+)
+
 Post.destroy_all
 
 Post.create(
