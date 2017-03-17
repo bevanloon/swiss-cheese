@@ -12,8 +12,16 @@ class SwissCheese < Sinatra::Base
     @current_user ||= User.find_by(id: session[:user_id])
   end
 
+  def is_admin?
+    current_user && current_user.admin
+  end
+
   def must_login!
-    halt 401, erb(:unauthorized)  unless @current_user
+    halt 401, erb(:unauthorized)  unless current_user
+  end
+
+  def must_be_admin!
+    halt 401, "You must be an admin to view this page" unless is_admin?
   end
 
   get '/' do
