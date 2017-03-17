@@ -5,10 +5,12 @@ class Posts < SwissCheese
   end
 
   get '/new' do
+    must_login!
     erb :'posts/new'
   end
 
   post '/' do
+    must_login!
     post = Post.new
     post.title = params["title"]
     post.body = params["body"]
