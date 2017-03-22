@@ -53,3 +53,20 @@
 .menu a {
   text-decoration: none;
 }
+.frm-inline {
+  margin: 0;
+}
+
+input[type="submit"].btn-delete {
+  background:none!important;
+  color:inherit;
+  border:none;
+  padding:0!important;
+  font: inherit;
+  border-bottom:1px solid #444;
+  cursor: pointer;
+  border-radius: 0;
+  text-transform: none;
+  margin-bottom: 0;
+  letter-spacing: normal;
+}
