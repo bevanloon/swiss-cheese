@@ -19,6 +19,9 @@
           <a href="/posts">list posts</a> |
           <a href="/posts/new">new post</a> |
         <% end %>
+        <% if is_admin? %>
+          <a href="/users">users</a> |
+        <% end %>
         <%= session[:user_id] || '<a href="/account/sign-in">sign in</a> | <a href="/account/sign-up">sign up</a>' %>
       </div>
       <div class="six columns">
