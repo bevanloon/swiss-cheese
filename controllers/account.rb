@@ -21,7 +21,7 @@ class Account < SwissCheese
     user = User.find_by(user_name: params[:user]['user_name'])
     if user && user.authenticate(params[:user]['password'])
       session[:user_id] = user.id
-      redirect to('/')
+      redirect '/'
     else
       'Uh oh'
     end
