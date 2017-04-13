@@ -15,7 +15,8 @@
       <%= user.admin %>
     </td>
     <td>
-      <form method="post" class="frm-inline" action="<%= user.id %>/delete">
+      <form method="post" class="frm-inline" action="/users/delete">
+        <input type="hidden" name="user_id" value="<%= user.id %>" >
         <input type="submit" class="btn-delete" value="Delete">
       </form>
     </td>

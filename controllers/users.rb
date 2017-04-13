@@ -15,4 +15,9 @@ class Users < SwissCheese
     user = User.where(id: current_user.id).update_all("password = '#params[:password]'")
     "saved"
   end
+
+  post '/delete' do
+    user_id = params["user_id"]
+    User.delete_all(id: user_id)
+  end
 end
