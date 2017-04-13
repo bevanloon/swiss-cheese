@@ -1,0 +1,19 @@
+<h3>Profile</h3>
+<form action="profile" method="post">
+  <div class="row">
+    <div class="six columns">
+      <input type="password" name="password" value="" placeholder"Password" class="u-full-width">
+    </div>
+  </div>
+  <div class="row">
+    <div class="six columns">
+      <input class="button-primary u-pull-right" value="Save" type="submit">
+    </div>
+  </div>
+</form>
+
+<h4>Delete account</h4>
+<form action="users/delete" method="post">
+  <input type="hidden" value="<%= session[:user_id] %>" name="user_id">
+  <input class="button-primary" value="Delete My Account" type="submit">
+</form>
