@@ -3,12 +3,14 @@ User.destroy_all
 User.create(
   user_name: 'admin',
   password: 'password',
+  display_name: 'Administrator',
   admin: true
 )
 
 User.create(
   user_name: 'user',
   password: 'password',
+  display_name: 'User',
   admin: false
 )
 
