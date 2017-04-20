@@ -1,1 +1,4 @@
-
+<% @posts.each do |post| %>
+  <h5><%= post.title %></h5>
+  <p><%= "#{post.body[0..200]}...<a href=\"posts/#{post.id}\">(more)</a>" %></p>
+<% end %>

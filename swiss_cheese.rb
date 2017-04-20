@@ -25,6 +25,7 @@ class SwissCheese < Sinatra::Base
   end
 
   get '/' do
+    @posts = Post.where(draft: false).limit(8)
     erb :"home"
   end
 end
