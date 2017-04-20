@@ -9,6 +9,11 @@ class Posts < SwissCheese
     erb :'posts/new'
   end
 
+  get '/:id' do |id|
+    @post = Post.find(id)
+    erb :'posts/show'
+  end
+
   post '/' do
     must_login!
     post = Post.new
