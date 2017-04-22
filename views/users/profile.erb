@@ -2,7 +2,7 @@
 <form action="profile" method="post">
   <div class="row">
     <div class="six columns">
-      <input type="password" name="password" value="" placeholder"Password" class="u-full-width">
+      <input type="text" value="<%= @current_user.display_name %>" name="display_name" placeholder="Display name" class="u-full-width">
     </div>
   </div>
   <div class="row">

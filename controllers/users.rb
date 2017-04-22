@@ -12,7 +12,8 @@ class Users < SwissCheese
   end
 
   post '/profile' do
-    user = User.where(id: current_user.id).update_all("password = '#params[:password]'")
+    new_name = params['display_name']
+    user = User.where(id: current_user.id).update_all("display_name = '#{new_name}'")
     "saved"
   end
 
