@@ -13,7 +13,8 @@ class Users < SwissCheese
 
   post '/profile' do
     new_name = params['display_name']
-    user = User.where(id: current_user.id).update_all("display_name = '#{new_name}'")
+    #user = User.where(id: current_user.id).update_all("display_name = '#{new_name}'")
+    user = User.update(current_user.id, display_name: new_name)
     "saved"
   end
 
