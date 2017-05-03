@@ -9,13 +9,13 @@
 <% @users.each do |user| %>
   <tr>
     <td>
-      <%= user.user_name %> 
+      <%= user.user_name %>
     </td>
     <td>
       <%= user.admin %>
     </td>
     <td>
-      <form method="post" class="frm-inline" action="/users/delete">
+      <form method="get" class="frm-inline" action="/users/delete">
         <input type="hidden" name="user_id" value="<%= user.id %>" >
         <input type="submit" class="btn-delete" value="Delete">
       </form>
@@ -23,4 +23,3 @@
   </tr>
 <% end %>
 </table>
-  
