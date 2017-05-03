@@ -17,8 +17,15 @@ class Users < SwissCheese
     "saved"
   end
 
-  post '/delete' do
+  get '/delete' do
     user_id = params["user_id"]
-    User.delete_all(id: user_id)
+
+    if user_id.to_i == current_user.id
+      # Log the user out if they delete their own account
+      session.delete(:user_id)
+    end
+
+    User.where(id: user_id).delete_all
+    "deleted"
   end
 end
