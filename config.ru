@@ -6,6 +6,7 @@ require './controllers/account'
 require './controllers/users'
 
 require './models/post'
+require './models/recent_search'
 require './models/user'
 
 map('/') { run SwissCheese }

@@ -1,0 +1,6 @@
+<p>
+  <strong>Recent searches:</strong>
+  <% @recent_searches.each do |recent_search| %>
+    <a href="/search?q=<%= recent_search.query %>"><%= recent_search.query %></a>
+  <% end %>
+</p>

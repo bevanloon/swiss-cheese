@@ -64,13 +64,13 @@ Post.create(
 Post.create(
   title: "Speak Roughly To Your Little Boy",
   body: %(
-  Speak roughly to your little boy, 
-  And beat him when he sneezes; 
-  He only does it to annoy, 
+  Speak roughly to your little boy,
+  And beat him when he sneezes;
+  He only does it to annoy,
   Because he knows it teases
 
-  I speak severely to my boy, 
-  I beat him when he sneezes; 
+  I speak severely to my boy,
+  I beat him when he sneezes;
   For he can thoroughly enjoy
   The pepper when he pleases!
   ),
@@ -275,4 +275,10 @@ Post.create(
   They'd eaten every one.
   ),
   draft: true
+)
+
+RecentSearch.destroy_all
+
+RecentSearch.create(
+  query: 'oyster'
 )
